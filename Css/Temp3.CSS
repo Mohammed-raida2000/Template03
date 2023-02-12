@@ -1,0 +1,128 @@
+/* Start Variables */
+:root {
+    --main-color: #2196f3;
+    --main-color-alt:#1787e0;
+    --main-transtions:0.3s;
+}
+/* end Variables */
+/* start global rules */
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+body {
+    font-family: 'Cairo', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+.continar {
+    /* عشان  المحتوى يبقى بنص الشاشة */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/* media quary > part responseves*/
+/* meduim 768px 991px */
+@media (min-width:768px) {
+    .continar {
+        width: 750px;
+    }
+}
+/* large 992px 1199px*/
+@media (min-width: 992px) {
+    .continar {
+        width: 970px;
+    }
+}
+/*X-Large 1200px to 1399px*/
+@media (min-width: 1200px) {
+    .continar {
+        width: 1170px;
+    }
+}
+/* End Global Rules */
+/* Start Header */
+.header {
+    background-color: white;
+    box-shadow: 0 0 10px #ddd ;
+    -webkit-box-shadow: 0 0 10px #ddd;
+    -moz-box-shadow: 0 0 10px #ddd;
+}
+.header .continar {
+    display: flex;
+    flex-wrap: wrap;
+    height: 80px;
+    position: relative;
+    font-size: 18px;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.header .continar .logo {
+    font-size: 30px;
+    color: var(--main-color);
+    font-weight: 900;
+    align-items: center;
+    display: flex;
+}
+@media (max-width:767px) {
+    .header .continar .logo { 
+        width: 100%;
+        justify-content: center;
+        height: 40px;
+    }
+}
+.header .main-nav {
+    display: flex;
+}
+@media (max-width:767px) {
+    .header .main-nav {
+        margin: auto;
+    }
+}
+.header .main-nav > li > a {
+    display: flex;
+    padding: 0 30px;
+    height: 70px;
+    color: black;
+    text-align: center;
+    align-items: center;
+    transition: var(--main-transtions);
+    overflow: hidden;
+    position: relative;
+}
+@media (max-width:767px) {
+    .header .main-nav>li>a {
+        height: 40px;
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+.header .main-nav > li > a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: var(--main-color);
+    top: 0;
+    left: -100%;
+    transition: var(--main-transtions);
+}
+.header .main-nav>li>a:hover {
+    color: var(--main-color);
+    background-color: #FAFAFA;
+}
+.header .main-nav>li>a:hover::before {
+    left: 0;
+}
+/* End Header */
