@@ -4,6 +4,7 @@
     --main-color-alt: #1787e0;
     --main-transtions: 0.3s;
     --main-padding: 50px;
+    --main-border-color: #e9e6e6;;
 }
 
 /* end Variables */
@@ -120,11 +121,10 @@ a {
 .header .continar {
     display: flex;
     flex-wrap: wrap;
-    height: 72px;
+    height: 80px;
     position: relative;
     font-size: 18px;
     justify-content: space-between;
-    overflow: hidden;
 }
 
 .header .continar .logo {
@@ -133,6 +133,7 @@ a {
     font-weight: 900;
     align-items: center;
     display: flex;
+    height: 80px;
 }
 
 @media (max-width:767px) {
@@ -156,9 +157,9 @@ a {
 .header .main-nav>li>a {
     display: flex;
     padding: 0 30px;
-    height: 70px;
+    height: 80px;
     color: black;
-    text-align: center;
+    justify-content: center;
     align-items: center;
     transition: var(--main-transtions);
     overflow: hidden;
@@ -191,6 +192,74 @@ a {
 
 .header .main-nav>li>a:hover::before {
     left: 0;
+}
+
+.header .megamenu {
+    width: 100%;
+    background-color: white;
+    z-index: -1;
+    display: flex;
+    position: absolute;
+    left: 0;
+    gap: 40px;
+    opacity: -1;
+    padding: 30px;
+    border-bottom: 3px solid var(--main-color);
+    top: calc(100% + 50px);
+    transition: top var(--main-transtions), opacity var(--main-transtions);
+}
+@media (max-width:767px) {
+    .header .megamenu {
+        padding: 5px;
+            gap: 0px;
+            flex-direction: column;
+        }
+}
+.header .main-nav>li:hover .megamenu {
+    z-index: 100;
+    opacity: 1;
+    top: calc(100% + 1px);
+}
+
+.header .megamenu .image img {
+    max-width: 100%;
+}
+
+@media (max-width:991px) {
+    .header .megamenu .image {
+        display: none;
+    }
+}
+
+.header .megamenu .links {
+    min-width: 250px;
+    flex: 1;
+}
+
+.header .megamenu li:hover {
+    background-color: #FAFAFA;
+    transition: var(--main-transition);
+}
+
+.header .megamenu ul li:not(:last-child) {
+    border-bottom: 1px solid var(--main-border-color);;
+}
+
+@media (max-width:767px) {
+    .header .megamenu ul li:last-child {
+        border-bottom: 1px solid var(--main-border-color);;
+    }
+}
+.header .megamenu li a {
+    color: var(--main-color);
+    font-size: 18px;
+    display: block;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.header .megamenu li i {
+    margin-right: 10px;
 }
 
 /* End Header */
