@@ -1358,8 +1358,6 @@ i {
     margin-top: 10px;
     color: #777;
 }
-.videos .holder .top-video h2 {}
-.videos .holder .top-video i {}
 .videos .holder .video {
     display: flex;
     flex-direction: column;
@@ -1376,8 +1374,89 @@ i {
     background-color: white;
     margin-top: 10px;
 }
-
 /* end video */
+/* start awesome */
+.Awesome {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    position: relative;
+    background-image: url(../image/stats.jpg);
+    background-size: cover;
+    position: relative;
+}
+.Awesome::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255 255 255 / 95%);
+}
+.Awesome h1 {
+    font-weight: bold;
+    font-size: 40px;
+    width: fit-content;
+    margin: 0 auto 50px;
+    position: relative;
+    z-index: 2;
+}
+.Awesome .continar {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap: 15px;
+    position: relative;
+}
+.Awesome .box {
+    background: white;
+    padding: 30px 15px;
+    text-align: center;
+    position: relative;
+    transition: var(--main-transtions);
+    opacity: 0.8;
+}
+.Awesome .box::before ,
+.Awesome .box::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 0%;
+    background: var(--main-color-alt);
+    transition: 1s;
+}
+.Awesome .box::before {
+    content: "";
+    top: 0;
+    right: 0;
+}
+.Awesome .box::after {
+    content: "";
+    bottom: 0;
+    left: 0
+}
+.Awesome .box:hover::after ,
+.Awesome .box:hover::before {
+    height: 100%;
+    opacity: 1;
+}
+.Awesome .box i {
+    margin: 10px auto;
+}
+.Awesome .box .number {
+    display: block;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.Awesome .box .number::before {
+    content: "" counter();
+}
+.Awesome .box .text {
+    font-size: 20px;
+    color: var(--main-color);
+    font-weight: bold;
+    font-family: inherit;}
+/* end awesome */
 /* start animatioms */
 @keyframes up-to-dowen {
 
