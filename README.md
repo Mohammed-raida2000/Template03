@@ -32,3 +32,5 @@
 
 ### Author
 [OsamaElzero](https://github.com/OsamaElzero)
+
+<sub> Author pattern from [mouatezbenariba](https://github.com/mouatezbenariba) </sub>
